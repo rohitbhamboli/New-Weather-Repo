@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+body {
+  color: white;
+  background: url(/images/sky.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.head-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5%;
+  height: 20vh;
+  /* position: relative; */
+  /* border: 2px solid green; */
+}
+.head-container h1 {
+  position: relative;
+  background-color: transparent;
+  animation: floater 2s linear infinite;
+}
+@keyframes floater {
+  0% {
+    transform: translateY(0px);
+    box-shadow: 0px 10px 20px -10px rgba(57, 73, 99, 0.9);
+  }
+  50% {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px -10px rgba(57, 73, 99, 0.3);
+  }
+  100% {
+    transform: translateY(0px);
+    box-shadow: 0px 10px 20px -10px rgba(57, 73, 99, 0.9);
+  }
+}
+.free {
+  color: gold;
+}
+
+nav {
+  /* border: 2px solid yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* nav h1{
+    margin-left: -50px;
+} */
+nav ul {
+  margin-right: 240px;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+  /* color: white; */
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+nav ul li .menu-btn {
+  position: relative;
+}
+.menu-btn::after {
+  content: "";
+  background-color: gold;
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: -6px;
+  position: absolute;
+  transition: 0.3s;
+}
+.menu-btn:hover::after {
+  width: 100%;
+}
+
+.card-container {
+  margin-top: 2vh;
+  /* border: 2px solid red; */
+  width: 98.5vw;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.card-container form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* border: 2px solid green; */
+  width: 300px;
+  height: 4.8vh;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.696);
+  box-shadow: 0px 2px 20px black;
+}
+.card-container form input[type="text"] {
+  height: inherit;
+  border: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  width: 85%;
+  background: transparent;
+  vertical-align: middle;
+  outline: none;
+  padding-left: 3px;
+}
+.card-container form input:focus {
+  outline: none;
+}
+input::placeholder {
+  color: rgb(88, 88, 88);
+  font-family: "Ubuntu", sans-serif;
+}
+.card-container form i {
+  color: rgb(85, 112, 157);
+  padding: 2px;
+  cursor: pointer;
+  /* border: 2px solid black; */
+}
+.card-container .card {
+  width: 400px;
+  /* border: 2px solid black; */
+  border-radius: 25px;
+  height: 35vh;
+  background-color: rgba(255, 255, 255, 0.696);
+  text-align: center;
+  box-shadow: 2px 2px 30px black;
+  color: black;
+  padding: 5px;
+}
+.card-container .card .top{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.907);
+  margin: auto;
+  border-radius: 20px;
+}
+.card-container .card .top p{
+  font-weight: 500;
+}
+.card-container .card .main{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card-container .card .main #city-name{
+  color: blue;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 2rem 0;
+}
+.card-container .card .main .middle{
+  display: flex;
+  justify-content: space-around;
+}
+.card-container .card .main .middle p,
+.card-container .card .main .middle .fa{
+  font-size: 3rem;
+  font-weight: 600;
+}
+.card-container .card .main .hidden-data{
+  visibility: hidden;
+  transition: all 0.4s linear;
+}
+.card-container .card .main sup{
+  font-size: 2rem;
+  margin-top: -5px;
+}
+.fa{
+  color: rgb(0, 98, 255);
+  padding-top: 10px;
+}
+/* About Page Styles */
+
+.card-container .about-card{
+  width: 60vw;
+  height: 60vh;
+  /* border: 2px solid red; */
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.696);
+  text-align: center;
+  box-shadow: 2px 2px 30px black;
+  color: black;
+  padding: 12px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card-container .about-card .about-col-1{
+  flex-basis: 60%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.card-container .about-card .about-col-1 span{
+  color: rgb(85, 112, 157);
+}
+.card-container .about-card .about-col-1 .error{
+  font-size:50px;
+}
+.card-container .about-card .about-col-1 .error .err-spn{
+  font-size: 80px;
+}
+.card-container .about-card .about-col-2{
+  flex-basis: 30%;
+  height: 95%;
+  border-radius: 30px;
+}
+.card-container .about-card .about-col-2 #about-img{
+  width: 100%;
+  border-radius: 30px;
+  margin-top: auto;
+}
+.btn {
+  display: inline-block;
+  margin: 15px auto;
+  width: fit-content;
+  border: 1px solid rgb(85, 112, 157);
+  background-color: transparent;
+  color: rgb(85, 112, 157);
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  transition: background-color 0.6s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgb(85, 112, 157);
+  color: white;
+}
+
+@media only screen and (max-width: 750px) {
+  body {
+    /* background-color: rgb(85,112,157); */
+    background: url(/images/sky-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  nav ul {
+    margin-right: auto;
+    text-align: center;
+  }
+  .card-container{
+    margin: 0;
+    /* border: 2px solid red; */
+  }
+  .card-container form{
+    width: 85vw;
+  }
+  .card-container .card{
+    width: 90vw;
+  }
+  /* About page mobile */
+.card-container .about-card{
+  width: 90vw;
+  flex-flow: row;
+}
+.card-container .about-card .about-col-1{
+  flex-basis: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.card-container .about-card .about-col-2{
+  visibility: hidden;
+  flex-basis: 0;
+}
+}

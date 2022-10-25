@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="shortcut icon" href="/images/icon.ico" type="image/x-icon">
+    <title>Free Weather</title>
+  </head>
+  <body>
+    <!--------- Head Section Starts ---------->
+    <div class="head-container">
+      <h1><span class="free">Free</span> Weather</h1>
+      <nav>
+        <ul>
+          <li><a class="menu-btn" href="">Home</a></li>
+          <li><a class="menu-btn" href="/about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="card-container">
+      <form action="#">
+        <input
+          type="text"
+          name="search"
+          id="srch"
+          placeholder="Search city"
+          autocomplete="off"
+        /><i id="srch-btn" class="fa-solid fa-magnifying-glass"></i>
+      </form>
+      <br />
+      <div class="card">
+        <div class="top">
+          <p id="today"></p>
+          <p id="todate"></p>
+        </div>
+        <div class="main">
+          <p id="city-name"><span>Results will be shown here</span></p>
+        <div class="middle hidden-data">
+          <p id="temp"><span id="real-val">20</span> <sup>o</sup>C</p>
+          <p id="temp-status"></i></p>
+        </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
